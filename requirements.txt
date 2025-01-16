@@ -95,3 +95,4 @@ streamlit
 pandas
 numpy
 python-dotenv
+speechrecognition
