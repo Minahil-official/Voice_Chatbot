@@ -174,19 +174,19 @@ agent = initialize_agent(tools, llm, agent=AgentType.STRUCTURED_CHAT_ZERO_SHOT_R
 
 # Streamlit App UI
 st.title("Multimodal Chatbot with Audio")
-st.sidebar.header("Options")
-mode = st.sidebar.selectbox("Choose Input Mode:", ["Text", "Audio"])
+st.sidebar.write("Available Tools:")
+st.sidebar.write("- Calculator")
+st.sidebar.write("- Weather")
+st.sidebar.write("- Fetch Latest News")
 
 
-tool_selected = st.sidebar.selectbox("Select a Tool", ["None", "Calculator", "Weather","fetch_latest_news"])
 
 
 
-if mode == "Text":
-    user_input = st.text_input("Enter your query")
-    if st.button("Submit"):
-        response = agent.invoke(user_input)
-        st.write(response)
+user_input = st.text_input("Enter your query")
+if st.button("Submit"):
+    response = agent.invoke(user_input)
+    st.write(response)
         # Speak the response
 
 
