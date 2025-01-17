@@ -16,8 +16,8 @@ from langchain.agents import initialize_agent, AgentType
 from langchain_core.tools import tool
 import speech_recognition as sr
 from gtts import gTTS
-import tempfile
-import playsound
+# import tempfile
+# import playsound
 
 
 # Function: Text-to-Speech (Output Audio)
